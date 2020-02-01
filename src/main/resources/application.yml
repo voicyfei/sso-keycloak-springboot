@@ -1,0 +1,17 @@
+keycloak:
+  # keycloak的地址
+  auth-server-url: https://bocsys.xyz:18443/auth/
+  # keycloak中的realm
+  realm: wtest
+  resource: wtest
+  bearer-only: true
+  ssl-required: external
+  use-resource-role-mappings: true
+  principal-attribute: preferred_username
+server:
+  port: 8081
+  ssl:
+    key-store: server.jks
+    key-store-password: BOChq999
+    keyStoreType: JKS
+    keyAlias: alias
