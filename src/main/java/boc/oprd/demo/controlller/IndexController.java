@@ -1,6 +1,6 @@
 package boc.oprd.demo.controlller;
 
-import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,8 +11,8 @@ public class IndexController {
         return "来了";
     }
 
+    @PreAuthorize("hasRole('USER')") 
     @RequestMapping("/test")
-    @Secured("ROLE_TEST")
     public String test() {
         return "test rest info";
     }
