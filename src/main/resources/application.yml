@@ -15,8 +15,4 @@ server:
     key-store-password: BOChq999
     keyStoreType: JKS
     keyAlias: alias
-spring: 
-  security: 
-    user:
-      name: admin
-      password: admin
+debug: true
